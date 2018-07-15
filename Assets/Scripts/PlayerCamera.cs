@@ -7,7 +7,7 @@ public class PlayerCamera : MonoBehaviour {
     public float distance = 3.0f;
     public float height = 3.0f;
     public Transform Target;
-    private int x = 0;
+    
     
     
     
@@ -24,9 +24,7 @@ public class PlayerCamera : MonoBehaviour {
         }
         catch
         {
-            x++;
-            if (x < 1)
-            { transform.position += new Vector3(0.0f, height, -distance / 1.001f); }
+            
             
         }
 	}
