@@ -18,7 +18,7 @@ public class PointBehav : MonoBehaviour {
         if ( other.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
-            text.text = (int.Parse(text.text) + 1).ToString() ;
+            text.text = (int.Parse(text.text) + 100).ToString() ;
         }
     }
 }
