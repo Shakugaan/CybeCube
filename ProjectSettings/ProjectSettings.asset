@@ -548,7 +548,9 @@ PlayerSettings:
   webGLUseEmbeddedResources: 0
   webGLUseWasm: 0
   webGLCompressionFormat: 1
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    1: Trigerboxes
+    7: Trigerboxes
   platformArchitecture: {}
   scriptingBackend: {}
   incrementalIl2cppBuild: {}

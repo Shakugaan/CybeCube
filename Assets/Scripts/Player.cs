@@ -1,25 +1,23 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
-    private float speed= 20f; //movement<>
-    public float height = 2f; //jump^
-    private float A = 0.0f; //Timer
+    private float speed= 20f;
+    private float height = 2f;
+    private float A = 0.0f; 
     public Text Lives;
     public Rigidbody rb;
-
     void Start () {
         rb = GetComponent<Rigidbody>();
     }
-
 	void Update ()
     {
         A += Time.deltaTime;
         if(Input.GetKey(KeyCode.Escape))
-        {
-            Application.Quit();
+        { 
+               SceneManager.LoadScene("Menu_1");           
         }
         //Left & Right
         if (Input.GetKey(KeyCode.D))
@@ -37,7 +35,6 @@ public class Player : MonoBehaviour {
             rb.AddForce(Vector3.up * speed * 2);
         }
     }
-
     void OnCollisionStay(Collision other)
     {
         if (other.gameObject.CompareTag("Floor") && A>0.2)
